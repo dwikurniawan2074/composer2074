@@ -35,7 +35,7 @@ class MahasiswaController extends BaseController
             'npm' => 'required',
             'nama' => 'required',
             'alamat' => 'required',
-            'deskripsi' => 'required'
+            'deskripsi' => 'required',
         ])) {
             return redirect()->to('/create');
         }
@@ -45,7 +45,7 @@ class MahasiswaController extends BaseController
             'npm' => $this->request->getPost('npm'),
             'nama' => $this->request->getPost('nama'),
             'alamat' => $this->request->getPost('alamat'),
-            'deskripsi' => $this->request->getPost('deskripsi')
+            'deskripsi' => $this->request->getPost('deskripsi'),
         ];
 
         $mahasiswaModel->save($data);
@@ -79,7 +79,7 @@ class MahasiswaController extends BaseController
             'npm' => 'required',
             'nama' => 'required',
             'alamat' => 'required',
-            'deskripsi' => 'required'
+            'deskripsi' => 'required',
         ])) {
             return redirect()->to('/edit/' . $id);
         }
@@ -89,7 +89,7 @@ class MahasiswaController extends BaseController
             'npm' => $this->request->getVar('npm'),
             'nama' => $this->request->getVar('nama'),
             'alamat' => $this->request->getVar('alamat'),
-            'deskripsi' => $this->request->getVar('deskripsi')
+            'deskripsi' => $this->request->getVar('deskripsi'),
         ];
 
         $mahasiswaModel->update($id, $data);
